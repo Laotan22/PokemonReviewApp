@@ -14,6 +14,7 @@ namespace PokemonReviewApp.Data
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Country> Countries { get; set; }
+        public DbSet<ImageUpload> Images { get; set; }
         public DbSet<Owner> Owners { get; set; }
         public DbSet<Pokemon> Pokemon { get; set; }
         public DbSet<PokemonOwner> PokemonOwners { get; set; }
@@ -23,7 +24,7 @@ namespace PokemonReviewApp.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Polemon category join table
+            //Pokemon category join table
             modelBuilder.Entity<PokemonCategory>()
                 .HasKey(pc => new { pc.PokemonId, pc.CategoryId });
             
@@ -46,7 +47,6 @@ namespace PokemonReviewApp.Data
                 .WithMany(po => po.PokemonOwners)
                 .HasForeignKey(p => p.PokemonId);
 
-            //This might be the error. po instead of pc
             modelBuilder.Entity<PokemonOwner>()
                 .HasOne(p => p.Owner)
                 .WithMany(po => po.PokemonOwners)

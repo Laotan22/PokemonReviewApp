@@ -88,3 +88,4 @@ C:\Users\Laotan Faji\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\ne
 C:\Users\Laotan Faji\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Laotan Faji\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Laotan Faji\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\Laotan Faji\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\PokemonReviewApp.staticwebassets.runtime.json
