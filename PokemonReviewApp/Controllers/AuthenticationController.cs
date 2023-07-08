@@ -43,7 +43,7 @@ namespace PokemonReviewApp.Controllers
 
             if(!BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
             {
-                return BadRequest("username or password is incorrect");
+                return BadRequest("username or password is incorrect.");
             }
 
 
