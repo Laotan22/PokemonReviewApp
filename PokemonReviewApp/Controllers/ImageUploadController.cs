@@ -31,7 +31,7 @@ namespace PokemonReviewApp.Controllers
                         Directory.CreateDirectory(path);
                     }
 
-                    await using (FileStream fileStream=System.IO.File.Create(path+ imageUpload.imageFile.FileName))
+                    await using (FileStream fileStream=System.IO.File.Create(path + imageUpload.imageFile.FileName))
                     {
                         imageUpload.imageFile.CopyTo(fileStream);
                         fileStream.Flush();

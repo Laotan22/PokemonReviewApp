@@ -59,7 +59,7 @@ namespace PokemonReviewApp.Repository
             return ((decimal)review.Sum(r => r.Rating) / review.Count());
         }   
 
-        public ICollection<Pokemon> GetPokemons() 
+        public ICollection<Pokemon> GetPokemons()
         {
             return _context.Pokemon.OrderBy(p => p.Id).ToList();
         }

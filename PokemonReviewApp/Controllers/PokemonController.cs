@@ -17,6 +17,7 @@ namespace PokemonReviewApp.Controllers
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
+
         public PokemonController(IPokemonRepository pokemonRepository, IReviewRepository reviewRepository,IMapper mapper, IWebHostEnvironment webHostEnvironment)
         {
             _pokemonRepository = pokemonRepository;
@@ -45,6 +46,7 @@ namespace PokemonReviewApp.Controllers
             if (! _pokemonRepository.PokemonExists(pokeId)) { return NotFound(); }
 
             var pokemon = _mapper.Map<PokemonDto>(_pokemonRepository.GetPokemon(pokeId));
+
 
             if (!ModelState.IsValid) 
             { 

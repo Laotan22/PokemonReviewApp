@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wGDPNP9lmRWb8IMIisBevFj9NuEf+kygsFSbcN9mGuY=",
+  "Hash": "fc9weoXGFnY3QjyhoudBKKgllXCMKM8XBcbjbgWoRF4=",
   "Source": "PokemonReviewApp",
   "BasePath": "_content/PokemonReviewApp",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Laotan Faji\\source\\repos\\PokemonReviewApp\\PokemonReviewApp\\wwwroot\\uploads\\preview.png",
+      "SourceId": "PokemonReviewApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Laotan Faji\\source\\repos\\PokemonReviewApp\\PokemonReviewApp\\wwwroot\\",
+      "BasePath": "_content/PokemonReviewApp",
+      "RelativePath": "uploads/preview.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\preview.png"
+    },
     {
       "Identity": "C:\\Users\\Laotan Faji\\source\\repos\\PokemonReviewApp\\PokemonReviewApp\\wwwroot\\uploads\\Screenshot (1).png",
       "SourceId": "PokemonReviewApp",
