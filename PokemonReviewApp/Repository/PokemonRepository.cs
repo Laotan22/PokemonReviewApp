@@ -53,10 +53,13 @@ namespace PokemonReviewApp.Repository
         {
             var review = _context.Reviews.Where(p => p.Pokemon.Id == pokeId);//.FirstOrDefault();
 
-            if (review.Count() >= 0)
+            if (review.Count() == 0)
                 return 0;
 
-            return ((decimal)review.Sum(r => r.Rating) / review.Count());
+            decimal answer = (decimal)review.Sum(r => r.Rating) / review.Count();
+            decimal finalAnswer = decimal.Round(answer, 1, MidpointRounding.AwayFromZero);
+
+            return finalAnswer; //((decimal)review.Sum(r => r.Rating) / review.Count());
         }   
 
         public ICollection<Pokemon> GetPokemons()

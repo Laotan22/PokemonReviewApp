@@ -116,7 +116,7 @@ namespace PokemonReviewApp.Controllers
         public IActionResult UpdatePokemon(int pokeId, [FromQuery] int ownerId, [FromQuery] int catId, [FromBody] PokemonDto updatedPokemon)
         
         {
-            if (updatedPokemon== null)
+            if (updatedPokemon == null)
                 return BadRequest(ModelState);
 
             if (pokeId != updatedPokemon.Id)
