@@ -33,7 +33,7 @@ namespace PokemonReviewApp.Controllers
 
                     await using (FileStream fileStream=System.IO.File.Create(path + imageUpload.imageFile.FileName))
                     {
-                        imageUpload.imageFile.CopyTo(fileStream);
+                        await imageUpload.imageFile.CopyToAsync(fileStream);
                         fileStream.Flush();
                         return "Upload Done";
                     }
@@ -41,7 +41,7 @@ namespace PokemonReviewApp.Controllers
 
                 else
                 {
-                    return "failed";
+                    return "failed: it appears this image already exists";
                 }
             }
             catch (Exception ex)
@@ -59,7 +59,7 @@ namespace PokemonReviewApp.Controllers
             var filePath = path + fileName + ".png";
             if (System.IO.File.Exists(filePath))
             {
-                byte[] b = System.IO.File.ReadAllBytes(filePath);
+                byte[] b = await System.IO.File.ReadAllBytesAsync(filePath);
                 return File(b, "image/png");
             }
             return Ok(fileName);
